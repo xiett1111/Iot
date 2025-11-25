@@ -1,22 +1,11 @@
+```mermaid
 stateDiagram-v2
     direction LR
     
-    state S0 {
-        待机
-        Q1=0, Q2=0, Q3=0
-    }
-    state S1 {
-        泵1运行
-        Q1=1, Q2=0, Q3=0
-    }
-    state S2 {
-        泵1&2运行
-        Q1=1, Q2=1, Q3=0
-    }
-    state S3 {
-        泵1&2&警报运行
-        Q1=1, Q2=1, Q3=1
-    }
+    S0 : 待机<br>Q1=0, Q2=0, Q3=0
+    S1 : 泵1运行<br>Q1=1, Q2=0, Q3=0
+    S2 : 泵1&2运行<br>Q1=1, Q2=1, Q3=0
+    S3 : 泵1&2&警报运行<br>Q1=1, Q2=1, Q3=1
 
     [*] --> S0 : Reset/Power On
 
